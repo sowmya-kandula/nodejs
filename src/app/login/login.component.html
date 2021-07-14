@@ -1,0 +1,29 @@
+<h2 class="text-center text-white mt-5">Login form</h2>
+
+<div class="row text-light">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form class="text-light h5" #ref=ngForm (ngSubmit)="login(ref)">
+            <div class="mb-3">
+                <input type="radio" id="admin" name="usertype" class="m-3" value="admin123" ngModel>
+                <label for="admin">Admin</label><br>
+                <input type="radio" id="userpro" name="usertype"  class="m-3" value="user123"  ngModel>
+                <label for="userpro">User</label>
+            </div>
+           
+            <div class="mb-3">
+                <label for="un" class="form-label">Username</label>
+                <input type="text" class="form-control" id="un" name="username" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pw"  name="password" ngModel>
+            </div>
+        
+           
+        
+            <button class="btn btn-info btn-lg d-block mx-auto m-4" type="submit">Login</button>
+        </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>

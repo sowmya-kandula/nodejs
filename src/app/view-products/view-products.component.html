@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let product of products">
+        <div class="card text-dark">
+            <img src={{product.photo}} class="card-img-top" height="150px" width="150px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">MRP:{{product.mrp}}
+                <br>{{product.about}}
+                <button class="btn btn-sm btn-success float-end" *ngIf="username!='admin'" (click)="addToCart(product)">add to cart</button>
+                <button class="btn btn-sm btn-success  float-end" *ngIf="username=='admin'">Delete</button></p>
+            </div>
+        </div>
+    </div>
+</div>

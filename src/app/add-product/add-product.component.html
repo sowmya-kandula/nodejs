@@ -1,0 +1,29 @@
+  
+<div class="row">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form class="text-light fs-4" #ref=ngForm (ngSubmit)="onAddProduct(ref)" >
+            <div >
+                <label for="username">product name</label>
+                <input type="username" class="form-control" id="username" name="name"
+                    ngModel>
+                
+            </div>
+            <div >
+                <label for="mrp">MRP</label>
+                <input type="text" class="form-control" id="mrp"  name="mrp"
+                    ngModel >
+            </div>
+        
+            <label for="about">about</label><br>
+                <textarea name="about" id="about" cols="30" rows="10" placeholder="write here ...." ngModel></textarea>
+                <div class="mb-3">
+                    <label for="ph" class="form-label fs-4">choose a  file for productofile photo</label>
+                    <input type="file" class="form-control" id="ph" name="photo" (change)=selectFile($event) ngModel>
+                </div>
+            <button class="btn btn-info btn-lg d-block mx-auto m-4"  type="submit">Add Product to collection</button>   
+        </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>
+

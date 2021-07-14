@@ -1,0 +1,17 @@
+<div class="contaner">
+<h1 class="text-center text-success border-top"> welcome {{userObj.username}}</h1>
+<h4>Email:{{userObj.email}}</h4>
+<h4>DOB:{{userObj.dob}}</h4>
+<img src="{{userObj.photo}}" alt="">
+<ul class="nav nav-pills d-flex justify-content-evenly m-3 mb-5 border-top  ">
+    <li class="nav-item ">
+        <a class="nav-link" routerLinkActive="active" routerLink="view-products">View products</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="view-cart">Cart</a>
+    </li>
+
+</ul>
+    <router-outlet></router-outlet>
+
+</div>
